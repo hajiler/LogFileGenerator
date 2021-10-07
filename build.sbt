@@ -1,3 +1,5 @@
+import sbtassembly.AssemblyKeys
+
 name := "LogFileGenerator"
 
 version := "0.1"
@@ -25,3 +27,8 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % typesafeConfigVersion,
   "com.github.mifmif" % "generex" % generexVersion
 )
+
+assembly / assemblyMergeStrategy := {
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+  case x => MergeStrategy.first
+}
