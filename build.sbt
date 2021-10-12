@@ -25,7 +25,9 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % scalacticVersion % Test,
   "org.scalatest" %% "scalatest-featurespec" % scalacticVersion % Test,
   "com.typesafe" % "config" % typesafeConfigVersion,
-  "com.github.mifmif" % "generex" % generexVersion
+  "com.github.mifmif" % "generex" % generexVersion,
+  "org.apache.hadoop" % "hadoop-common" % "2.10.0",
+  "org.apache.hadoop" % "hadoop-core" % "1.2.1"
 )
 
 assembly / assemblyMergeStrategy := {
