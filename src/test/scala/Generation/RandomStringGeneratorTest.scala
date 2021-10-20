@@ -74,5 +74,4 @@ class RandomStringGeneratorTest extends AnyFlatSpec with Matchers with PrivateMe
     val result:String = rsg invokePrivate callConstruct(someString, 10)
     result startsWith(someString)
   }
-
 }
